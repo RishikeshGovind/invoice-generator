@@ -353,9 +353,9 @@ const InvoiceForm = () => {
                 <div className="col-md-4">
                   <input type="text" 
                          className="form-control" 
-                         placeholder="Branch/IFSC Code"
-                         value={invoiceData.account.ifsccode}
-                         onChange={(e)=> handleChange("account", "ifsccode", e.target.value)}
+                         placeholder="Branch/sort code"
+                         value={invoiceData.account.sortcode}
+                         onChange={(e)=> handleChange("account", "sortcode", e.target.value)}
                   />
                 </div> 
             </div> 

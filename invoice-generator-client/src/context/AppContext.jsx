@@ -7,7 +7,7 @@ export const initialInvoiceData = {
     billing: {name: "", phone: "", address: ""},
     shipping: {name: "", phone: "", address: ""},
     invoice: {number: "", date: "", dueDate: ""},
-    account: {name: "", number: "", ifsccode:""},
+    account: {name: "", number: "", sortcode:""},
     company: {name: "", number: "", address: ""},
     tax:0,
     notes: "",

@@ -72,9 +72,9 @@ const Template2 = ({ data }) => {
                 <tr key={index}>
                   <td className="p-2">{item.name}</td>
                   <td className="p-2 text-center">{item.qty || 0}</td>
-                  <td className="p-2 text-end">₹{Number(item.amount || 0).toFixed(2)}</td>
+                  <td className="p-2 text-end">£{Number(item.amount || 0).toFixed(2)}</td>
                   <td className="p-2 text-end">
-                    ₹{(Number(item.qty || 0) * Number(item.amount || 0)).toFixed(2)}
+                    £{(Number(item.qty || 0) * Number(item.amount || 0)).toFixed(2)}
                   </td>
                 </tr>
               ))}
@@ -89,30 +89,30 @@ const Template2 = ({ data }) => {
           <div className="p-3 w-100 totals-box" style={{ maxWidth: "300px" }}>
             <div className="d-flex justify-content-between mb-2">
               <span>Sub Total:</span>
-              <span>₹{Number(data.subtotal || 0).toFixed(2)}</span>
+              <span>£{Number(data.subtotal || 0).toFixed(2)}</span>
             </div>
             {data.tax > 0 && (
               <div className="d-flex justify-content-between mb-2">
                 <span>Tax({data.tax}%):</span>
-                <span>₹{Number(data.taxAmount || 0).toFixed(2)}</span>
+                <span>£{Number(data.taxAmount || 0).toFixed(2)}</span>
               </div>
             )}
             <div className="d-flex justify-content-between fw-bold total-highlight">
               <span>Total</span>
-              <span>₹{Number(data.total || 0).toFixed(2)}</span>
+              <span>£{Number(data.total || 0).toFixed(2)}</span>
             </div>
           </div>
         </div>
       </div>
 
       {/* Bank Account Info */}
-      {(data.accountName || data.accountNumber || data.accountIfscCode) && (
+      {(data.accountName || data.accountNumber || data.accountsortCode) && (
         <div className="row mt-4">
           <div className="col-md-8 text-start">
             <h3 className="mb-2 template2-billing-title">Bank Account Details</h3>
             {data.accountName && <p className="mb-1"><strong>Account Holder:</strong> {data.accountName}</p>}
             {data.accountNumber && <p className="mb-1"><strong>Account Number:</strong> {data.accountNumber}</p>}
-            {data.accountIfscCode && <p className="mb-0"><strong>IFSC/Branch Code:</strong> {data.accountIfscCode}</p>}
+            {data.accountsortCode && <p className="mb-0"><strong>sort/Branch Code:</strong> {data.accountsortCode}</p>}
           </div>
         </div>
       )}
